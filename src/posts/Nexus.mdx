@@ -1,0 +1,64 @@
+---
+slug: Nexus.mdx
+title: Up and Running with Nexus
+date: 2025-09-16
+summary: A start to finish guide to Nexus artifact repository Manager
+tags: [Devops, Nexus, Maven, Gradle, TWN]
+---
+
+## What is Nexus Repository?
+
+**Nexus Repository (often called Nexus Repo)** is a repository manager developed by **Sonatype**.
+It helps development teams **store, organize, and distribute software components, dependencies, and build artifacts** in a reliable and secure way.
+
+Think of it like a **warehouse for software packages**.
+---
+## Why Use Nexus Repository?
+
+- **Artifact Storage**
+  Store build outputs (e.g., JARs, Docker images, npm packages, Python wheels, Helm charts).
+
+- **Proxy & Caching**
+  Acts as a proxy for public repositories (Maven Central, npm registry, PyPI, Docker Hub).
+  Cached artifacts reduce network dependency and speed up builds.
+
+- **Reliability & Security**
+  Centralized control over dependencies ensures only approved libraries are used.
+
+- **Faster Builds**
+  Dependencies are served locally, improving CI/CD performance.
+
+- **Multi-Format Support**
+  Supports Maven, npm, PyPI, Docker, NuGet, RubyGems, Helm, and more.
+---
+## Editions
+
+- **Nexus Repository OSS**
+  Free, open-source version with core functionality.
+
+- **Nexus Repository Pro**
+  Enterprise edition with advanced security, analytics, and high availability.
+
+---
+
+## Nexus vs Other Repository Managers
+
+While Nexus Repo is widely adopted, there are alternatives such as:
+
+- **JFrog Artifactory** – similar feature set, enterprise-focused.
+- **GitHub Packages** – integrated directly into GitHub for code + packages.
+- **Azure Artifacts** – part of Microsoft’s DevOps ecosystem.
+
+Nexus Repo’s strength lies in **wide format support, stability, and strong community adoption**.
+
+---
+
+## System Requirements
+
+- **Minimum**
+    2x CPUs | 8 GB ram | 20 GB local Disk
+- Nexus can be run on any OS, but for easeI always use ubuntu
+
+## Downloads Folder
+- https://help.sonatype.com/en/download.html
+

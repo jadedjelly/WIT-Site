@@ -1,0 +1,67 @@
+Personal Journey & Learning
+
+Why I’m Automating Myself Out of IT Operations – story-driven piece about your transition from sysadmin/manual IT tasks into DevOps practices.
+
+Lessons Learned From My First Kubernetes Deployment – highlight pitfalls and successes.
+
+My DevOps Portfolio: How I Built It and What I Learned – meta post, good for recruiters to see.
+
+Breaking Into DevOps in My 40s: A Practical Roadmap – inspirational/personal story.
+
+🛠️ Hands-On Technical Tutorials
+
+Deploying a Static Site on AWS vs Netlify: A Practical Comparison – showcase cost, pipelines, scalability.
+
+Containerizing a Node.js App: From Dockerfile to Deployment – beginner-friendly step-by-step.
+
+Jenkins vs GitHub Actions: Which CI/CD Tool Fits Your Workflow? – practical comparison.
+
+How to Use Helmfile for Managing Multi-Service Kubernetes Deployments.
+
+Setting Up Prometheus & Grafana Monitoring for a Dockerized App.
+
+Infrastructure as Code With Terraform: My First AWS Deployment.
+
+Using Nexus as a Private Docker & Maven Repository.
+
+📚 Review & Reflection
+
+Book Review: Docker Deep Dive by Nigel Poulton – What I Learned.
+
+The Most Useful DevOps Tutorials I’ve Followed (and Why).
+
+Top 5 Mistakes I Made When Learning Kubernetes.
+
+What the DevOps Roadmaps Don’t Tell You (But You Learn the Hard Way).
+
+🌐 Cloud & Tools in Action
+
+Deploying the Same App on AWS and Azure – What’s Different?.
+
+Using Jenkins Pipelines to Deploy Dockerized Apps to EKS.
+
+Building a Multi-Environment Setup (Dev/Staging/Prod) with Terraform.
+
+Secrets Management in DevOps: My Approach With Vault & AWS Secrets Manager.
+
+CI/CD for Frontend + Backend Apps: One Pipeline to Rule Them All.
+
+⚡ Showcase Projects (turn projects into posts)
+
+A Beginner-Friendly Guide to Docker Compose (with My Blog Setup as Example).
+
+Monitoring My Blog With Prometheus: Metrics That Actually Matter.
+
+Self-Hosting vs Cloud: Running My Blog in Containers on AWS.
+
+Building a Blog Workflow: Writing → CI/CD → Container → Deploy.
+
+👉 A good mix would be:
+
+Personal stories (to humanize your portfolio)
+
+Tutorials (to showcase practical skill)
+
+Reviews/reflections (to show you’re thinking critically, not just following steps)
+
+Cloud + tools comparisons (to show breadth)

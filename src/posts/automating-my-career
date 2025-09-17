@@ -1,0 +1,20 @@
+---
+slug: automating-my-career
+title: Why I’m Automating Myself Out of IT Operations
+date: 2025-09-15
+summary: About my transition from sysadmin into DevOps role..
+tags: [Devops, career-break]
+---
+
+Back in late 2019, I was working as an IT ops manager (I filled all roles, from the lowly IT eng manning the trenches on the frontlines, to the IT manager running budgets, testing new s/w
+ and so on) for a software development firm that specialised in Tax systems. When I started in the role, their active
+directory Domain services were being run through a Win VM on Azure, while also running Azure Active directory (now known as EntraID), as you can imagine any issues
+on one were replicated on the other, and to add some extra spice to the mix, they had a backup AD running on prem in another office.
+One of the major issues, were accounts that had never been deactivated (the oldest at the time was 8 years), were accessible to anyone that requested the access.
+Other issues included, group policies running from their on-prem, OS & S/W updates as and when kicked off, zero control over browser extensions, no control over user profile
+s/w installations (an easy way to get around admin cred needs), no Asset reg of who had what. A few 100 tickets in a system no one monitored, prior to me starting, the company
+were using a MSP (which prior to me starting as the IT manager, I was the MSPs newest Senior Engineer), I was sent to the company, due to constant complaints from both sides.
+On the side of the MSP, the complaints ranged from no information given about their in house s/w outside of what it did (which would be normal), to not getting full access to the azure landscape (again normal to a degree),
+on the side of the company, their complaints were a managerie of no tickets being closed, or tickets taking months to close or engineers coming onsite and sitting in the loo for "far too long"...
+
+
