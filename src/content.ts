@@ -142,12 +142,38 @@ export const site = {
     },
   ],
   projects: [
+          {
+            name: 'DisciplineEngine',
+            link: 'https://github.com/jadedjelly/Windows_game_blocker', // or a live URL; omit to show plain text
+            description: 'Designed and deployed a Windows-native application to enforce time-based restrictions on resource-heavy applications (Steam, Battle.net).',
+            tags: ['Devops', 'Python', 'WindowsAutomation', 'SelfImprovement'], // drives the filter buttons
+          }
+        {
+          name: 'Customizable Browser Governance Extension',
+          link: 'https://github.com/jadedjelly/FF_Ext_Blocker', // or a live URL; omit to show plain text
+          description: 'A Firefox extension that enforces time-based website access policies using a configurable whitelist — built for focus, discipline, and DevOps-driven browser governance.',
+          tags: ['Governance', 'Workplace automation', 'Javascript'], // drives the filter buttons
+        }
+      {
+        name: 'Rebuilding Devop projects',
+        link: 'https://github.com/jadedjelly', // or a live URL; omit to show plain text
+        description: 'Rebuilding projects, to wrap in with blog posts & aiding other like minded people',
+        tags: ['Kubernetes', 'GitOps', 'Terraform', 'Ansible', 'Python', 'Nexus', 'Jenkins', 'Docker'], // drives the filter buttons
+      },
     {
       name: 'Waltzing in Tryst — DevOps Portfolio',
-      link: 'https://waltzingintryst.netlify.app/',
+      link: 'https://github.com/jadedjelly/WIT-Site',
       description: 'Modern portfolio/blog: React + TS, Tailwind dark mode, markdown posts, tag filters, Dockerized for Netlify.',
       tags: ['React', 'Tailwind', 'Markdown', 'Docker', 'AWS'],
-}
+},
+
+    {
+      name: 'Rebuilding Devop projects',
+      link: 'https://github.com/jadedjelly', // or a live URL; omit to show plain text
+      description: 'Rebuilding projects, to wrap in with blog posts & aiding other like minded people',
+      tags: ['Kubernetes', 'GitOps', 'Terraform', 'Ansible', 'Python', 'Nexus', 'Jenkins', 'Docker'], // drives the filter buttons
+    },
+
 
   ],
 }
