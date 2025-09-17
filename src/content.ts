@@ -148,11 +148,17 @@ export const site = {
             description: 'Designed and deployed a Windows-native application to enforce time-based restrictions on resource-heavy applications (Steam, Battle.net).',
             tags: ['Devops', 'Python', 'WindowsAutomation', 'SelfImprovement'], // drives the filter buttons
           },
+            {
+              name: 'DisciplineEngine-Linux',
+              link: 'https://github.com/jadedjelly/ubuntu_blocker', // or a live URL; omit to show plain text
+              description: 'Linux service to block steam between 8am and 5pm every day, and to run on startup (Steam, Battle.net).',
+              tags: ['Devops', 'Bash', 'LinuxAutomation', 'SelfImprovement'], // drives the filter buttons
+            },
         {
           name: 'Customizable Browser Governance Extension',
           link: 'https://github.com/jadedjelly/FF_Ext_Blocker', // or a live URL; omit to show plain text
           description: 'A Firefox extension that enforces time-based website access policies using a configurable whitelist — built for focus, discipline, and DevOps-driven browser governance.',
-          tags: ['Governance', 'Workplace automation', 'Javascript'], // drives the filter buttons
+          tags: ['Governance', 'Workplace automation', 'Javascript', 'SelfImprovement'], // drives the filter buttons
         },
       {
         name: 'Rebuilding Devop projects',
