@@ -166,12 +166,12 @@ export const site = {
       description: 'Modern portfolio/blog: React + TS, Tailwind dark mode, markdown posts, tag filters, Dockerized for Netlify.',
       tags: ['React', 'Tailwind', 'Markdown', 'Docker', 'AWS'],
 },
-    {
-      name: 'Rebuilding Devop projects',
-      link: 'https://github.com/jadedjelly', // or a live URL; omit to show plain text
-      description: 'Rebuilding projects, to wrap in with blog posts & aiding other like minded people',
-      tags: ['Kubernetes', 'GitOps', 'Terraform', 'Ansible', 'Python', 'Nexus', 'Jenkins', 'Docker'], // drives the filter buttons
-    },
+//     {
+//       name: 'Rebuilding Devop projects',
+//       link: 'https://github.com/jadedjelly', // or a live URL; omit to show plain text
+//       description: 'Rebuilding projects, to wrap in with blog posts & aiding other like minded people',
+//       tags: ['Kubernetes', 'GitOps', 'Terraform', 'Ansible', 'Python', 'Nexus', 'Jenkins', 'Docker'], // drives the filter buttons
+//     },
   ],
 }
 
