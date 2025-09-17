@@ -148,12 +148,6 @@ export const site = {
       description: 'Modern portfolio/blog: React + TS, Tailwind dark mode, markdown posts, tag filters, Dockerized for Netlify.',
       tags: ['React', 'Tailwind', 'Markdown', 'Docker', 'AWS'],
 }
-    {
-      name: 'Devop Projects',
-      link: '#',
-      description: 'Currently in the process of rebuilding projects, ',
-      tags: ['React', 'Tailwind', 'Markdown', 'Docker', 'AWS'],
-}
 
   ],
 }
