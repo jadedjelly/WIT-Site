@@ -5,6 +5,71 @@ date: 2025-09-19
 summary: "coming soon"
 tags: [Devops, Red Dwarf, Feynman, gradle, maven, npm]
 ---
+import RepoLink from '../components/RepoLink'
+import TLDR from '../components/TLDR'
 
+<TLDR>
 
-coming soon
+Package managers fetch the bits, build tools glue it all together, Docker shrink-wraps it for launch. Don’t overthink it — just let the tools do the boring smeg while you kick back with a lager and a curry.
+
+Course Notes: <RepoLink href="https://github.com/jadedjelly/Nana_Devops_BC/blob/main/notes/4-build-package-manager.md" />
+
+_worth noting, the is site, uses _npm build dev_ during testing or when needing new packages, like the one used for TL;DR which is an import_
+</TLDR>
+
+## Intro
+
+Running an application is a lot like keeping the mining ship Red Dwarf spaceworthy: half the parts are missing, and the other half are covered in curry stains. To keep things from exploding (too often), we’ve got package managers and build tools.
+
+For Java we use Maven and Gradle, for JavaScript there’s npm, and for Python you’ve got pip. Instead of rummaging through storage lockers and manually bolting on every spare part, these tools fetch dependencies for you.
+
+But some tools — like Maven and Gradle — go further. They don’t just fetch spare parts; they also handle compiling, bundling, testing, and deploying. Think of them as Kryten (fetching the parts) mixed with Rimmer (clipboard out, ticking off every task until the ship’s ready to launch).
+
+## Package Managers vs. Build Tools
+
+* _Package managers_ are focused on dependencies — the external libraries your app needs. (Though npm does have scripts for testing and building, its main job is fetching parts.)
+
+* _Build tools_ orchestrate the entire project lifecycle: compiling code, bundling everything together, running tests, and packaging it all into something you can actually run in production.
+
+For Java, build tools produce artifacts like:
+
+* .jar (_Java Archive_) – for standard Java apps.
+
+* .war (_Web Application Archive_) – for web applications.
+
+JavaScript projects usually bundle their .js files, sometimes zipped or published as .tar.gz archives.
+
+And these days, instead of deploying raw JARs or WARs, we usually wrap everything inside a Docker image using a Dockerfile. It’s like shrink-wrapping Starbug so it can be launched from anywhere in the galaxy without the wings falling off.
+
+## Commands in Action
+
+* Installing a dependency is like asking Kryten to fetch something from the supply locker. With npm (JavaScript), you’d say:
+
+```console
+npm install express
+```
+
+Kryten scuttles off, finds Express, and bolts it onto your app. For Python, it’s the same routine:
+
+```console
+pip install requests
+```
+Same Kryten, different locker.
+
+When it’s time to actually build the whole smegging ship, that’s where the build tools come in. With Maven you’d run:
+```console
+mvn clean install
+```
+
+This doesn’t just grab dependencies — it compiles the code, runs tests, and neatly packages everything into a .jar. Classic Rimmer: over-bureaucratic but effective.
+
+Gradle does the same thing with a bit more swagger (definitely the Cat of build tools):
+```console
+gradle build
+```
+
+It struts in, does the job, and checks its reflection before strutting back out.
+
+Finally, to get your app production-ready, you drop everything into a Dockerfile and build an image. That’s like shrink-wrapping Starbug so you can launch it from anywhere without the doors falling off mid-flight.
+
+So yeah — package managers fetch the bits, build tools strap it all together, Docker shrink-wraps it for launch. Easy, right? Now if you’ll excuse me, I’ve got a vindaloo with my name on it, and trust me — it’s a lot more exciting than another build log.
