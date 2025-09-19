@@ -1,16 +1,22 @@
 import { defineConfig } from 'vite'
 import mdx from '@mdx-js/rollup'
-import remarkGfm from 'remark-gfm'
+import react from '@vitejs/plugin-react-swc'
 import remarkFrontmatter from 'remark-frontmatter'
 import remarkMdxFrontmatter from 'remark-mdx-frontmatter'
-import react from '@vitejs/plugin-react-swc'
+// (optional, nice) pretty code + headings:
+import rehypeSlug from 'rehype-slug'
+import rehypeAutolinkHeadings from 'rehype-autolink-headings'
+import rehypePrettyCode from 'rehype-pretty-code'
 
-// MDX must come first so React SWC can compile the MDX->JSX output
 export default defineConfig({
   plugins: [
     mdx({
-      remarkPlugins: [remarkGfm, remarkFrontmatter, remarkMdxFrontmatter],
-      // providerImportSource: '@mdx-js/react' // uncomment if you use <MDXProvider>
+      remarkPlugins: [remarkFrontmatter, remarkMdxFrontmatter],
+      rehypePlugins: [
+        rehypeSlug,
+        [rehypeAutolinkHeadings, { behavior: 'wrap' }],
+        [rehypePrettyCode, { theme: { light: 'github-light', dark: 'github-dark' }, keepBackground: false }],
+      ],
     }),
     react(),
   ],

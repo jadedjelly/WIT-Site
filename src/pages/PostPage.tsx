@@ -3,7 +3,7 @@ import { useMemo, useState } from 'react'
 import { useParams, Link } from 'react-router-dom'
 import postsData from '../posts'
 import { Card, Tag } from '../components/UI'
-import { Calendar, Tag as TagIcon, Clock } from 'lucide-react'
+import { Calendar, Tag as TagIcon, Clock, ArrowRight } from 'lucide-react'
 
 export default function PostPage() {
   const { slug } = useParams()
@@ -93,8 +93,19 @@ export default function PostPage() {
               </div>
             </div>
 
-            {/* MDX content */}
-            <article className="prose max-w-none prose-headings:scroll-mt-24 dark:prose-invert">
+            {/* Smaller MDX typography */}
+            <article
+              className="
+                prose md
+                max-w-3xl lg:max-w-4xl mx-auto
+                dark:prose-invert
+                prose-headings:scroll-mt-28
+                prose-p:my-5 prose-p:leading-relaxed
+                prose-img:rounded-xl prose-img:shadow
+                prose-a:underline-offset-4 hover:prose-a:decoration-2
+                prose-hr:my-10
+              "
+            >
               <Component />
             </article>
           </Card>
@@ -117,9 +128,14 @@ export default function PostPage() {
                 <div className="grid gap-4">
                   {related.map(r => (
                     <Card key={r.slug}>
-                      <Link to={`/posts/${r.slug}`} className="text-base font-semibold hover:underline">{r.title}</Link>
+                      <span className="text-base font-semibold">{r.title}</span>
                       {r.summary && <p className="text-gray-700 dark:text-gray-300 mt-1">{r.summary}</p>}
-                      <div className="mt-2">{r.tags.map(t => <Tag key={t}>{t}</Tag>)}</div>
+                      <div className="mt-2 flex flex-wrap gap-2">{r.tags.map(t => <Tag key={t}>{t}</Tag>)}</div>
+                      <div className="mt-2">
+                        <Link to={`/posts/${r.slug}`} className="text-sm underline underline-offset-4 hover:decoration-2 inline-flex items-center gap-1">
+                          Read <ArrowRight size={14} />
+                        </Link>
+                      </div>
                     </Card>
                   ))}
                   <div className="text-sm">
@@ -190,12 +206,15 @@ export default function PostPage() {
                           <li key={p.slug} className="mb-3 ms-4">
                             <div className={`absolute w-2 h-2 rounded-full mt-2 -start-1 ${isCurrent ? 'bg-indigo-500' : 'bg-gray-400 dark:bg-gray-600'}`}></div>
                             <div className="flex items-center justify-between gap-2">
-                              <Link to={`/posts/${p.slug}`} className={`text-sm hover:underline ${isCurrent ? 'font-semibold' : ''}`}>
-                                {p.title}
-                              </Link>
-                              <span className="text-xs text-gray-500 dark:text-gray-400 whitespace-nowrap">
-                                {new Date(p.date).toLocaleDateString()}
-                              </span>
+                              <span className={`text-sm ${isCurrent ? 'font-semibold' : ''}`}>{p.title}</span>
+                              <div className="flex items-center gap-3">
+                                <span className="text-xs text-gray-500 dark:text-gray-400 whitespace-nowrap">
+                                  {new Date(p.date).toLocaleDateString()}
+                                </span>
+                                <Link to={`/posts/${p.slug}`} className="text-xs underline underline-offset-4 hover:decoration-2 inline-flex items-center gap-1">
+                                  Open <ArrowRight size={12} />
+                                </Link>
+                              </div>
                             </div>
                           </li>
                         )

@@ -1,35 +1,34 @@
 
 import { useMemo, useState } from 'react'
-import { Calendar, Tag as TagIcon, Clock } from 'lucide-react'
+import { Calendar, Tag as TagIcon, Clock, ArrowRight } from 'lucide-react'
 import postsData from '../posts'
-import { Section, Card } from '../components/UI'
+import { Card } from '../components/UI'
 import { Link } from 'react-router-dom'
 
 export default function PostsIndex() {
   const metas = useMemo(() => postsData.map(p => p.meta), [])
 
-  // --- Tag frequency for "Popular Tags" ---
+  // Popular tags by frequency
   const popularTags = useMemo(() => {
     const counts: Record<string, number> = {}
-    for (const p of metas) {
-      for (const t of p.tags) counts[t] = (counts[t] ?? 0) + 1
-    }
+    for (const p of metas) for (const t of p.tags) counts[t] = (counts[t] ?? 0) + 1
     return Object.entries(counts)
       .sort((a, b) => b[1] - a[1])
-      .slice(0, 12) // top N
+      .slice(0, 12)
       .map(([tag, count]) => ({ tag, count }))
   }, [metas])
 
-  // --- Selected tag filter (shared by main + sidebar) ---
+  // Selected tag filter
   const [activeTag, setActiveTag] = useState<string | null>(null)
 
+  // Apply filter to list
   const filtered = useMemo(() => {
     if (!activeTag) return metas
     const n = (x: string) => x.toLowerCase()
     return metas.filter(p => p.tags.some(t => n(t) === n(activeTag)))
   }, [metas, activeTag])
 
-  // --- Timeline data grouped by year (uses filtered posts) ---
+  // Timeline grouped by year (uses filtered posts)
   const timelineByYear = useMemo(() => {
     const map = new Map<string, typeof metas>()
     for (const p of filtered) {
@@ -37,13 +36,11 @@ export default function PostsIndex() {
       if (!map.has(year)) map.set(year, [] as any)
       map.get(year)!.push(p)
     }
-    // sort each year newest->oldest
     for (const [, arr] of map) arr.sort((a, b) => (a.date < b.date ? 1 : -1))
-    // sort years newest->oldest
     return Array.from(map.entries()).sort((a, b) => (a[0] < b[0] ? 1 : -1))
   }, [filtered])
 
-  // --- All tags list for main filter bar (alphabetical) ---
+  // Alphabetical all-tags list for filter bar
   const allTags = useMemo(() => {
     const s = new Set<string>()
     for (const p of metas) for (const t of p.tags) s.add(t)
@@ -51,7 +48,9 @@ export default function PostsIndex() {
   }, [metas])
 
   return (
-    <Section title="All posts" size="wide">
+    <section className="max-w-7xl mx-auto px-4 md:px-6 py-14">
+      <h2 className="text-2xl md:text-3xl font-semibold tracking-tight mb-6 dark:text-gray-100">All posts</h2>
+
       <div
         className="
           grid gap-8 lg:gap-12
@@ -106,13 +105,12 @@ export default function PostsIndex() {
             {filtered.map(post => (
               <Card key={post.slug}>
                 <div className="flex flex-wrap items-center justify-between gap-2">
-                  <Link to={`/posts/${post.slug}`} className="text-lg font-semibold hover:underline">
-                    {post.title}
-                  </Link>
+                  <span className="text-lg font-semibold">{post.title}</span>
                   <span className="text-sm text-gray-600 dark:text-gray-400 inline-flex items-center gap-2">
                     <Calendar size={16} /> {new Date(post.date).toLocaleDateString()}
                   </span>
                 </div>
+
                 {post.summary && (
                   <p className="text-gray-700 dark:text-gray-300 mt-1">{post.summary}</p>
                 )}
@@ -133,6 +131,16 @@ export default function PostsIndex() {
                     </button>
                   ))}
                 </div>
+
+                {/* Secondary read link */}
+                <div className="mt-3">
+                  <Link
+                    to={`/posts/${post.slug}`}
+                    className="inline-flex items-center gap-1 text-sm underline underline-offset-4 hover:decoration-2"
+                  >
+                    Read <ArrowRight size={14} />
+                  </Link>
+                </div>
               </Card>
             ))}
 
@@ -143,7 +151,7 @@ export default function PostsIndex() {
         </div>
 
         {/* SIDEBAR */}
-        <aside className="md:sticky md:top-24 space-y-6">
+        <aside className="md:sticky md:top-24 lg:pl-10 space-y-6">
           {/* Popular Tags */}
           <Card>
             <div className="flex items-center justify-between mb-3">
@@ -199,12 +207,19 @@ export default function PostsIndex() {
                         <li key={p.slug} className="mb-3 ms-4">
                           <div className="absolute w-2 h-2 bg-gray-400 dark:bg-gray-600 rounded-full mt-2 -start-1"></div>
                           <div className="flex items-center justify-between gap-2">
-                            <Link to={`/posts/${p.slug}`} className="text-sm hover:underline">
-                              {p.title}
-                            </Link>
-                            <span className="text-xs text-gray-500 dark:text-gray-400 whitespace-nowrap">
-                              {new Date(p.date).toLocaleDateString()}
-                            </span>
+                            <span className="text-sm">{p.title}</span>
+                            <div className="flex items-center gap-3">
+                              <span className="text-xs text-gray-500 dark:text-gray-400 whitespace-nowrap">
+                                {new Date(p.date).toLocaleDateString()}
+                              </span>
+                              <Link
+                                to={`/posts/${p.slug}`}
+                                className="text-xs underline underline-offset-4 hover:decoration-2 inline-flex items-center gap-1"
+                                title="Open post"
+                              >
+                                Open <ArrowRight size={12} />
+                              </Link>
+                            </div>
                           </div>
                         </li>
                       ))}
@@ -216,6 +231,6 @@ export default function PostsIndex() {
           </Card>
         </aside>
       </div>
-    </Section>
+    </section>
   )
 }

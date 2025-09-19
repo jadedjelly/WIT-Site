@@ -57,7 +57,7 @@ Nexus Repo’s strength lies in **wide format support, stability, and strong com
 
 - **Minimum**
     2x CPUs | 8 GB ram | 20 GB local Disk
-- Nexus can be run on any OS, but for easeI always use ubuntu
+- Nexus can be run on any OS, but for ease I use ubuntu
 
 ## Downloads Folder
 - https://help.sonatype.com/en/download.html
