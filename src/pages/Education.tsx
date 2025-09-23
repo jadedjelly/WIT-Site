@@ -207,27 +207,9 @@ export default function Education() {
               <>
                 <h4 className="font-medium mb-2">Books</h4>
                 <p className="text-sm text-gray-600 dark:text-gray-300">
-                  Pick a tag on the left to see a list of the books I use.
+                  Pick a tag above to see recommended books.
                 </p>
               </>
-            )}
-          </Card>
-
-          {/* How to update (dynamic) */}
-          <Card>
-            <h4 className="font-medium mb-2">How to update</h4>
-            {activeTag ? (
-              <ol className="list-decimal list-inside text-sm space-y-1 text-gray-700 dark:text-gray-300">
-                <li>Add courses in <code>src/content.ts</code> → <code>site.education.courses</code> with tag <code>{activeTag}</code>.</li>
-                <li>(Optional) Add books in <code>site.education.books</code>, include tag <code>{activeTag}</code>.</li>
-                <li>Include <code>url</code> or <code>credentialUrl</code> to show links.</li>
-              </ol>
-            ) : (
-              <ol className="list-decimal list-inside text-sm space-y-1 text-gray-700 dark:text-gray-300">
-                <li>Edit <code>src/content.ts</code></li>
-                <li>Add items under <code>site.education.courses</code> (and <code>books</code> if you want recommendations)</li>
-                <li>Use tags for filtering (e.g., AWS, Kubernetes, Coursera)</li>
-              </ol>
             )}
           </Card>
         </aside>
