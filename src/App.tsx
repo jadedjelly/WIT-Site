@@ -4,6 +4,8 @@ import Home from './pages/Home'
 import PostsIndex from './pages/PostsIndex'
 import PostPage from './pages/PostPage'
 import Contact from './pages/Contact'
+import Education from './pages/Education'
+
 
 export default function App() {
   return (
@@ -13,7 +15,8 @@ export default function App() {
           <Route path="/" element={<Home />} />
           <Route path="/posts" element={<PostsIndex />} />
           <Route path="/posts/:slug" element={<PostPage />} />
-          <Route path="/contact" element={<Contact />} />   {/* ← add this */}
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/education" element={<Education />} />
         </Routes>
       </Layout>
     </BrowserRouter>

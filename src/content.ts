@@ -21,6 +21,7 @@ export const site = {
       'Node.js & Java builds, artifact mgmt (Nexus)',
     ],
   },
+
   experience: [
     {
     role: 'Devops Engineer & Writer',
@@ -36,7 +37,6 @@ export const site = {
         'Automated deployments and configuration management using Ansible; integrated Ansible with Terraform and Jenkins for complete stack automation.',
         'Implemented monitoring and observability with Prometheus and Grafana, creating dashboards and alerting rules for applications and containerized workloads.',
         'Developed Python & Boto3 automation scripts for AWS resource management (EC2, EKS, tagging, backups), uptime monitoring, and GitLab API integrations.',
-
       ],
     },
     {
@@ -179,7 +179,158 @@ export const site = {
 //       tags: ['Kubernetes', 'GitOps', 'Terraform', 'Ansible', 'Python', 'Nexus', 'Jenkins', 'Docker'], // drives the filter buttons
 //     },
   ],
+education: {
+//     degrees: [
+//       {
+//         school: 'University of Somewhere',
+//         program: 'BSc Computer Science',
+//         period: '2015 — 2018',
+//         location: 'London, UK',
+//         details: [
+//           'Final year project on CI/CD pipelines',
+//           'Modules: OS, Networks, Distributed Systems',
+//         ],
+//       },
+//     ],
+    courses: [
+      {
+        title: 'DevOps Bootcamp',
+        org: 'Techworld with Nana',
+        year: 2023,
+        status: 'In progress',
+        url: 'https://www.techworld-with-nana.com/devops-bootcamp',
+        //credentialUrl: 'https://example.com/credential',
+        tags: ['Linux', 'Git', 'Gradle & npm', 'IaaS', 'Nexus', 'IaC', 'Docker', 'Jenkins', 'AWS', 'Kubernetes', 'Terraform', 'Python', 'Ansible', 'Prometheus'],
+      },
+      {
+        title: 'RHCSA',
+        org: 'Pearson IT Certification',
+        year: 2023,
+        status: 'In progress',
+        url: 'https://www.pearsonitcertification.com/store/red-hat-certified-system-administrator-rhcsa-rhel-9-9780137931491',
+        tags: ['Red Hat 9', 'Linux Administration'],
+      },
+      {
+        title: 'Python',
+        org: 'Bro Code',
+        year: 2025,
+        status: 'In progress',
+        url: 'https://www.youtube.com/watch?v=ix9cRaBkVe0',
+        tags: ['Python', 'DevOps'],
+      },
+//       {
+//       title: 'Git for DevOps',
+//       org: 'Coursera',
+//       year: 2022,
+//       status: 'completed',
+//       tags: ['Git', 'DevOps', 'Coursera'],
+//       note: 'Emphasis on branching strategies and code review.',
+//     },
+],
+    books: [
+      {
+        title: 'The Phoenix Project',
+        author: 'Gene Kim',
+        year: 2013,
+        url: 'https://itrevolution.com/product/the-phoenix-project/',
+        tags: ['DevOps'],
+        note: 'Great narrative on flow and constraints.',
+      },
+      {
+        title: 'The Kubernetes Book',
+        author: 'Nigel Poulton',
+        year: 2025,
+        url: 'https://www.amazon.com/Kubernetes-Book-Version-November-2018-ebook/dp/B072TS9ZQZ/',
+        tags: ['Kubernetes'],
+      },
+      {
+        title: 'Docker Deep Dive',
+        author: 'Nigel Poulton',
+        year: 2025,
+        url: 'https://www.amazon.com/Docker-Deep-Dive-Nigel-Poulton-ebook/dp/B01LXWQUFF/',
+        tags: ['Docker'],
+      },
+      {
+        title: 'RHCSA Red Hat Enterprise Linux 9',
+        author: 'Asghar Ghori',
+        year: 2023,
+        url: 'https://www.amazon.co.uk/dp/1775062163',
+        tags: ['Red Hat 9', 'Linux'],
+      },
+        {
+          title: 'RHCSA9 Cert Guide (EX200)',
+          author: 'Sander Ven Vugt',
+          year: 2023,
+          url: 'https://www.amazon.co.uk/dp/0138096279',
+          tags: ['Red Hat 9', 'Linux'],
+        },
+        {
+          title: 'Python Crash Course',
+          author: 'Eric Matthes',
+          year: 2019,
+          url: 'https://www.amazon.co.uk/dp/1593279280',
+          tags: ['Python'],
+        },
+        {
+          title: 'Terraform - Up and Running',
+          author: 'Yevgeniy Brikman',
+          year: 2022,
+          url: 'https://www.amazon.co.uk/dp/1098116747',
+          tags: ['Terraform', 'IaC'],
+        },
+        {
+          title: 'Jenkins 2 – Up and Running',
+          author: 'Brent Laster',
+          year: 2018,
+          url: 'https://www.amazon.co.uk/dp/1491979593',
+          tags: ['Jenkins'],
+        },
+        {
+          title: 'Ansible for DevOps',
+          author: 'Jeff Geerling',
+          year: 2020,
+          url: 'https://leanpub.com/ansible-for-devops',
+          tags: ['Ansible'],
+        },
+        {
+          title: 'AWS Certified Solutions Architect Study Guide',
+          author: ' Ben Piper & David Clinton',
+          year: 2022,
+          url: 'https://www.amazon.co.uk/dp/B0BFC5YPQK',
+          tags: ['AWS', 'IaaS'],
+        },
+        {
+          title: 'AWS Certified Developer Official Study Guide',
+          author: ' Nick Alteen, Jennifer Fisher, Casey Gerena, Wes Gruver, Asim Jalis, Heiwad Osman, Marife Pagan, Santosh Patlolla, Michael Roth',
+          year: 2019,
+          url: 'https://www.amazon.co.uk/dp/1119508193',
+          tags: ['AWS', 'IaaS'],
+        },
+        {
+          title: 'Pro Git',
+          author: 'Scott Chacon and Ben Straub',
+          year: 2014,
+          url: 'https://git-scm.com/book/en/v2',
+          tags: ['Git'],
+        },
+        {
+          title: 'Gradle for NPM users',
+          author: 'Daniel Flynn',
+          year: 2017,
+          url: 'https://sparkbox.com/foundry/gradle_for_npm_users',
+          tags: ['Gradle & npm'],
+        },
+        {
+          title: 'Nexus Documentation',
+          author: 'Sonatype',
+          year: 2025,
+          url: 'https://help.sonatype.com/en/using-nexus-repository.html',
+          tags: ['Nexus'],
+        },
+    ],
+  },
 }
+
 
 export type Post = {
   slug: string

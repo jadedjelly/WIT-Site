@@ -39,10 +39,11 @@ export default function Layout({ children }: { children: ReactNode }) {
           </Link>
           <nav className="hidden md:flex items-center gap-4 text-sm">
             <Link to="/" className="hover:underline">Home</Link>
-            <Link to="/posts" className="hover:underline">Posts</Link>
-            <Link to="/contact" className="hover:underline">Contact</Link>
             <a href="/#about" className="hover:underline">About</a>
+            <Link to="/education" className="hover:underline">Education</Link>
+            <Link to="/posts" className="hover:underline">Posts</Link>
             <a href="/#projects" className="hover:underline">Projects</a>
+            <Link to="/contact" className="hover:underline">Contact</Link>
             <ThemeToggle />
           </nav>
           <div className="md:hidden flex items-center gap-2">
